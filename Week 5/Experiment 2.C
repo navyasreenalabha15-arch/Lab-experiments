@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float units, bill_amount = 0.0;
+    float units, total_bill;
 
 
     printf("Enter the total units consumed: ");
@@ -10,22 +10,19 @@ int main() {
         return 1;
     }
 
-     
+    
     if (units <= 100) {
-        bill_amount = units * 1.50;
-    } 
-    else if (units <= 200) {
-        bill_amount = units * 2.50;
-    } 
-    else if (units <= 500) {
-        bill_amount = units * 4.00;
-    } 
-    else {
-        bill_amount = units * 6.00;
+        total_bill = units * 1.50;
+    } else if (units <= 200) {
+        total_bill = units * 2.50;
+    } else if (units <= 500) {
+        total_bill = units * 4.00;
+    } else {
+        total_bill = units * 6.00;
     }
 
     
-    printf("Total Bill Amount: ₹ %.2f\n", bill_amount);
+    printf("Total Bill Amount: ₹ %.2f\n", total_bill);
 
     return 0;
 }
